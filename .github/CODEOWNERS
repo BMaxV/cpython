@@ -21,6 +21,7 @@ configure*                    @erlend-aasland @corona10
 **/*context*                  @1st1
 **/*genobject*                @markshannon
 **/*hamt*                     @1st1
+**/*jit*                      @brandtbucher
 Objects/set*                  @rhettinger
 Objects/dict*                 @methane @markshannon
 Objects/typevarobject.c       @JelleZijlstra
@@ -36,8 +37,9 @@ Python/flowgraph.c            @markshannon @iritkatriel
 Python/ast_opt.c              @isidentical
 Python/bytecodes.c            @markshannon @gvanrossum
 Python/optimizer*.c           @markshannon @gvanrossum
+Python/optimizer_analysis.c   @Fidget-Spinner
+Python/optimizer_bytecodes.c  @Fidget-Spinner
 Lib/test/test_patma.py        @brandtbucher
-Lib/test/test_peepholer.py    @brandtbucher
 Lib/test/test_type_*.py       @JelleZijlstra
 Lib/test/test_capi/test_misc.py  @markshannon @gvanrossum
 Tools/c-analyzer/             @ericsnowcurrently
@@ -117,7 +119,7 @@ Python/dynload_*.c            @ericsnowcurrently
 Lib/test/test_module/         @ericsnowcurrently
 Doc/c-api/module.rst          @ericsnowcurrently
 **/*importlib/resources/*     @jaraco @warsaw @FFY00
-**/importlib/metadata/*       @jaraco @warsaw
+**/*importlib/metadata/*       @jaraco @warsaw
 
 # Dates and times
 **/*datetime*                 @pganssle @abalkin
@@ -230,8 +232,8 @@ Doc/c-api/stable.rst          @encukou
 **/*zipfile/_path/*           @jaraco
 
 # Argument Clinic
-/Tools/clinic/**              @erlend-aasland @AlexWaygood
-/Lib/test/test_clinic.py      @erlend-aasland @AlexWaygood
+/Tools/clinic/**              @erlend-aasland
+/Lib/test/test_clinic.py      @erlend-aasland
 Doc/howto/clinic.rst          @erlend-aasland
 
 # Subinterpreters
@@ -241,9 +243,26 @@ Lib/test/support/interpreters/  @ericsnowcurrently
 Modules/_xx*interp*module.c   @ericsnowcurrently
 Lib/test/test_interpreters/   @ericsnowcurrently
 
+# Android
+**/*Android*                  @mhsmith
+**/*android*                  @mhsmith
+
+# iOS (but not termios)
+**/iOS*                       @freakboy3742
+**/ios*                       @freakboy3742
+**/*_iOS*                     @freakboy3742
+**/*_ios*                     @freakboy3742
+**/*-iOS*                     @freakboy3742
+**/*-ios*                     @freakboy3742
+
 # WebAssembly
 /Tools/wasm/                  @brettcannon
 
 # SBOM
+/Misc/externals.spdx.json     @sethmlarson
 /Misc/sbom.spdx.json          @sethmlarson
 /Tools/build/generate_sbom.py @sethmlarson
+
+# Config Parser
+Lib/configparser.py           @jaraco
+Lib/test/test_configparser.py @jaraco
